@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<title>Table</title>
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<style>
+    .table_dark {
+  font-size: 14px;
+  width: 640px;
+  text-align: left;
+  border-collapse: collapse;
+  background: #252F48;
+  margin: 10px; <!--Это общий отступ со всех сторон-->
+}
+.table_dark th {
+  color: #EDB749;<!--Выбираем цвета-->
+  border-bottom: 1px solid #37B5A5;
+  padding: 12px 17px; <!--этим свойством можно редактировать отступы со всех сторон-->
+}
+.table_dark td {
+  color: #CAD4D6;
+  border-bottom: 1px solid #37B5A5;
+  border-right:1px solid #37B5A5;
+  padding: 7px 17px;
+}
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+.column-list {
+  columns: 100px;
+  font-family:'helvetica neue';
+}
+
+body {
+  max-width: 100%;
+ 
+}
+* {
+  box-sizing:border-box;
+}
+body {
+  margin:20px;
+  background-color: #fafafa;
+}
+textarea {
+  width:500px;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;
+}
+body {
+  margin:30px;
+  font-size:18px;
+}
+
+label {
+  display:block;
+  margin-bottom:4px;
+  position: relative; 
+  padding-left:30px; 
+  cursor: pointer;
+}
+
+label input[type=radio] {
+  position: absolute; 
+  opactiy: 0;
+  width:0; 
+  height:0;
+}
+label span {
+  position: absolute;
+  top:0;
+  left:0;
+  width:20px; 
+  height:20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: .3s background-color;
+}
+label span:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color:#fff;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+}
+label:hover span {
+  background-color: #ccc;
+}
+label input:checked ~ span {
+  background-color: #2eaadc;
+}
+label input:checked ~ span:after {
+  display:block;
+}
+
+</style>
+</head>
+  <body>
+    <table class="table_dark"> <!--С помощью данного тега и создаются собственно таблицы.-->
+
+          <th>Игры</th> <!--создает одну ячейку заголовка-->
+          <th>Assasins Creed 1</th> <!--создает одну обычную ячейку-->
+          <th>Assasins Creed 2</th>
+          <th>Assasins Creed 3</th>
+          <th>Assasins Creed 4</th>
+          </tr><!--создает строку в таблице-->
+        <tr>
+          <td>Оценки метакритик от игроков</td>
+          <td>7.6</td>
+          <td>7.5</td>
+          <td>6.5</td>
+          <td>7.9</td>
+          </tr>
+        <tr>
+          <td>Оценки метакритик от журналистов</td>
+          <td>8.1</td>
+          <td>8.6</td>
+          <td>8</td>
+          <td>8.3</td>
+          </tr>
+        <tr>
+          <td>Собственная оценка</td>
+          <td>9</td>
+          <td>10</td>
+          <td>7</td>
+          <td>5</td>
+          </tr>
+        <tr>
+          <td>Время выхода</td>
+          <td>2007</td>
+          <td>2009</td>
+          <td>2012</td>
+          <td>2013</td>
+          </tr>
+        </table>
+        <details>
+          <summary>Остальные игры Ubisoft</summary>
+        <ul class="column-list">
+          <li>Far Cry 1</li>
+          <li>Far Cry 2</li>
+          <li>Far Cry 3</li>
+          <li>Far Cry Prymal</li>
+          <li>Far Cry 4</li>
+          <li>Far Cry 5</li>
+          <li>Far Cry 6</li>
+          <li>Rainbow Six Siege.</li>
+          <li>The Settlers.</li>
+          <li>Might and Magic Heroes 3</li>
+        </ul>
+      </details>
+      <textarea placeholder="Какую игру вы из них играли и какя больше понравилась"></textarea>
+      <p>Оцените</p>
+<label>Отлично
+  <input type="radio" name="voice" checked/>
+  <span></span>
+</label>
+<label>Нормально
+  <input type="radio" name="voice" />
+  <span></span>
+</label>
+<label>Плохо
+  <input type="radio" name="voice" />
+  <span></span>
+</label>
+<input type="button" value="Завершить">
+  </body>
+</html>
